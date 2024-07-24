@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    #demo{
+      margin: 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="demo"></canvas>
+
+  <script src="./text-image/text-image.iife.js"></script>
+
+  <script>
+    textImage.createTextImage({
+      canvas: document.getElementById('demo'),
+      replaceText: '哎哟你干嘛',
+      raduis: 18,
+      isGray: true,
+      source: {
+        video: './assets/cxk.mp4',
+        width: document.body.clientWidth,
+        // height: 500,
+      },
+    });
+  </script>
+
+  <script>
+    // 获取屏幕宽度
+    // document.body.clientWidth
+    console.log(document.body.clientWidth);
+
+  </script>
+</body>
+
+</html>
